@@ -14,14 +14,19 @@
         </Section> 
         <Section>
             <h2>What's on your mind</h2>
-            <div id="input-panel-wrapper">
-                <input type="text" id="username-input" placeholder="Username" />
-                <input type="text" id="title-input" placeholder="Title" />
-                <input type="text" id="content-input" placeholder="Content" />
-            </div>
-            <div>
-                <button id="submit-btn">Submit</button>
-            </div>
+            <form id="input-form-wrapper" action="C:\Users\ashle\bootcamp\Personal-Blog-Ashleigh\blog.html" method="POST">
+              <label for="username-input">Username:</label>
+              <input type="text" id="username-input" placeholder="Username" />
+              <br>
+              <label for="title-input">Title:</label>
+              <input type="text" id="title-input" placeholder="Title" />
+              <br>
+              <label for="content-input">Content:</label>
+              <textarea id="content-input" name="content"></textarea>
+              <br>
+              <button type="submit" id="submit-btn">Submit</button>
+            </form>
+    
 
 
       <script src="assets/js/form.js"></script>
