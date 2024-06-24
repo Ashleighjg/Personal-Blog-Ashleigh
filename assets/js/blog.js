@@ -45,10 +45,8 @@ function renderBlog () {
 
     const li = document.createElement('li');
     // li.innerHTML = blog;
-    li.innerHTML = `UserName :- ${blog.username}, Title :- ${blog.title}`;
-    
+    li.innerHTML = `UserName :- ${blog.username}, Title :- ${blog.title}, Content :- ${blog.content}`;
     li.setAttribute('data-index', i);
-
     ul.appendChild(li);
   } console.log(ul)
    blogList.appendChild(ul);
