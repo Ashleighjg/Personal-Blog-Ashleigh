@@ -1,45 +1,54 @@
 
-const blogCard = document.querySelector('#card');
+const blogList = document.querySelector('#blog-list');
+const goBackbtn = document.querySelector('#go-back');
 
-const blogs = [];
+//const blogs = [];
 
 function renderBlog () {
 
-    const blogData = JSON.parse(localStorage.getItem('userinfo'));
-    if (blogData !== null) {
- 
-    document.getElementById('saved-username').innerHTML=blogData.username;
-    document.getElementById('saved-title').innerHTML=blogData.title;
-    document.getElementById('saved-content').innerHTML=blogData.content;
+   // const storedBlogs = JSON.parse(localStorage.getItem('blogs'));
+
+    let storedBlogs = window.localStorage.getItem("blogs") || [];
+    console.log(JSON.parse(storedBlogs));
     
+    if (storedBlogs !== null) {
+     blogs = storedBlogs;
 
-    blogData = {
-    username : blogData.username,
-    title : blogData.title,
-    content : blogData.content,
-    };
+     /*
+     document.getElementById('saved-username').innerHTML=blogs.username;
+     document.getElementById('saved-title').innerHTML=blogs.title;
+     document.getElementById('saved-content').innerHTML=blogs.content;
+     */
+ }
 
-   
 
     // Render a new li for each blog
-    for (let i = 0; i < blog.length; i++) {
+    for (let i = 0; i < blogs.length; i++) {
       const blog = blogs[i];
 
       const li = document.createElement('li');
-      li.textContent = blog;
+      li.innerHTML = blog;
       li.setAttribute('data-index', i);
 
-      blogCard.appendChild(li);
+      blogList.appendChild(li);
     }
 }
-}
+
 
 
 function init () {
-    
-       renderBlog();
+        renderBlog();
+}
 
-};
 
+    function goBack(event) {
+        window.history.back();
+  };
+
+/*  window.addEventListener('beforeunload', () => {
+    const blogObjtoSave = { blogs: 'blogs' };
+    localStorage.setItem('blogs', JSON.stringify(blogObjtoSave));
+});
+*/
 
 init();

@@ -4,29 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashleigh's Personal Blog</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Ashleigh's Personal Blog</h1>
+    
     <main>
-        <Section> 
-            <img src="" alt="">
+        <Section class="container-lg"> 
+          <h1>Ashleigh's Personal Blog</h1>
+          <img src="" alt="">
         </Section> 
-        <Section>
+        <Section class="container-xl">
             <h2>What's on your mind</h2>
             <form id="input-form-wrapper" action="C:\Users\ashle\bootcamp\Personal-Blog-Ashleigh\blog.html" method="POST">
-              <label for="username-input">Username:</label>
-              <input type="text" id="username-input" placeholder="Username" />
-              <br>
-              <label for="title-input">Title:</label>
-              <input type="text" id="title-input" placeholder="Title" />
-              <br>
-              <label for="content-input">Content:</label>
-              <textarea id="content-input" name="content"></textarea>
-              <br>
+              <div class="mb-3"></div>
+                <label for="username-input" class="form-label">Username:</label>
+                <input type="text"  class="form-control" id="username-input" placeholder="Username" />
+              </div>
+              <div class="mb-3"> 
+                <label for="title-input" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="title-input" placeholder="Title" />
+              </div>
+              <div class="mb-3">  
+                <label for="content-input" class="form-label">Content:</label>
+                <textarea id="content-input" class="form-control" name="content"></textarea>
+              </div>
               <button type="submit" id="submit-btn">Submit</button>
+
+
+
+
             </form>
-    
+     
 
 
       <script src="assets/js/form.js"></script>

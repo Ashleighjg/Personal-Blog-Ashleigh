@@ -35,29 +35,51 @@ function loadFromLocalStorage() {
     
     });
 */
-    document.getElementById('input-form-wrapper').addEventListener('submit', function(event) {
+const blogs = [];
+    
+function storeBlogs() {
+    localStorage.setItem('blogs', JSON.stringify(blogs));
+};
+
+
+document.getElementById('input-form-wrapper').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
 
-        const formObj = {
+        const blogsObj = {
             username: userNameInput.value,
             title: titleInput.value,
             content: contentInput.value.trim(),
         };
-        //if (formObj.username !=='' || formObj.title !=='' || formObj.content !=='') {
-
-
-
+     
         //checks if data is missing and alerts to enter value if any input is missing  
-        if (formObj.username =='' || formObj.title =='' || formObj.content ==''){
+        if (blogsObj.username =='' || blogsObj.title =='' || blogsObj.content ==''){
         alert('Please enter a value before submitting.');
+        return;
     }
         //if there is no missing input, store data in local storage
-        else {
-        console.log (formObj);
-        localStorage.setItem('userinfo', JSON.stringify(formObj));
-        //window.location.href = ".\blog.html";
-        };
-});
+        blogs.push(blogsObj);
+        userNameInput.value = '';
+        titleInput.value = '';
+        contentInput.value = '';
+
+        storeBlogs();  
+
+        //window.location.href = "file:///C:/Users/ashle/bootcamp/Personal-Blog-Ashleigh/blog.html";
+        
+       /* window.addEventListener('beforeunload', () => {
+            const blogObjtoSave = { blogs: 'blogs' };
+            localStorage.setItem('blogs', JSON.stringify(blogObjtoSave));
+        });
+        */
+        });
+
+   function init () {
+    storeBlogs();
+   }
+        
+      
+        init ();
+
 
         /*const inputValue = [
             document.getElementById('username-input').value,
