@@ -101,7 +101,7 @@ function storeBlogs() {
         storeBlogs();
     
   
-        window.location.href = 'file:///C:/Users/ashle/bootcamp/Personal-Blog-Ashleigh/blog.html';
+        window.location.href = './blog.html';
   
         function init () {
             storeBlogs();
