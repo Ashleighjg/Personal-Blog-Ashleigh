@@ -129,5 +129,5 @@ function storeBlogs() {
   */
   //Call init to retreieve data and render it to the page
   
-  init ();
+    init();
   
