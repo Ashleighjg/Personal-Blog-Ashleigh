@@ -2,11 +2,11 @@
 ## Description
 
 
-I was motivated to modify existing code for this Employee Payroll Tracker website as part of my bootcamp week3 challenge. This project was built to showcase my proficency at basic javaScript skills. I was able to make a responsive website that allows the user to input employee information into a table.
+I was motivated to create this website as part of my bootcamp week4 challenge. This wesite was built to allow a user to make and display blog posts. I was able to make a responsive website that allows the user to input and view username, title, and content data.
 
-([Employee Payroll Tracker website](https://ashleighjg.github.io/Emp-Payroll/))
+([Ashleigh's Blog website](https://ashleighjg.github.io/Personal-Blog-Ashleigh/))
 
-([Code source location](https://github.com/Ashleighjg/Ashleigh-Pro-Porfolio/blob/main/index.html))
+([Code source location](https://github.com/Ashleighjg/Personal-Blog-Ashleigh))
 
 
 ## Installation
@@ -17,18 +17,20 @@ N/A
 
 
 
-![Shows employee payroll tracker.](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\emptracker.JPG)
+![Shows personal blog.](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\emptracker.JPG)
 
 This website can be used by managers and supervisors to input and view their employee name and salary on table.
 
- ![Shows employee information input prompt](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\inputbox.JPG)
+ ![Shows personal blog input form](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\inputbox.JPG)
 
- ![Shows employee information in the table](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\roster.JPG)
+ Once the user has entered in all requested data into the form, the data is stored in local storage and then the user is redirected to the blog posts page. Once on the blog posts page they will have an up to date view of all blog posted that have been submitted. If the user desires to enter a new post they can select the back button and they will be taken to the previous page to submit a new blog form. 
+
+ ![Shows personal blog input posted in new page ](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\roster.JPG)
 
    
-Once the user has entered in all of the employees and their data, the average salary and total number of employees is displayed in the console. A random employee is selected out of all the employeed entered into the table.
+![Shows personal blog in light mode ](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\roster.JPG)
 
- ![Shows employee information in the console of an employee payroll tracker.](C:\Users\ashle\bootcamp\Emp-Payroll\Pictures\Console.JPG)
+
  
 
 
@@ -36,7 +38,7 @@ Once the user has entered in all of the employees and their data, the average sa
 
 ## Credits
 
-This webiste can be used by employers or employees that have need to be able to see employees along with there salaries in one place along with a salary average and random employee selection.
+This webiste can be used by anyone that wants to add content to this blog.
 
 Portions of this code is sourced from Github Student Repo 
 
