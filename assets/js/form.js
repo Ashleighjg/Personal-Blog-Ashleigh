@@ -23,37 +23,9 @@ themeSwitcher.addEventListener('click', function () {
     container.setAttribute('class', 'dark');
   }
 });
- /* const blogsObj = {
-        username: [],
-        title: [],
-        content: [],
-    };
+ 
 
-
-function loadFromLocalStorage() {
-
-    const blogData = JSON.parse(localStorage.getItem('userinfo'));
-    if (blogData !== null) {
-       document.getElementById('saved-username').innerHTML=blogData.username;
-       document.getElementById('saved-title').innerHTML=blogData.title;
-       document.getElementById('saved-content').innerHTML=blogData.content;
-   
-};
-};
-
-
-/*submitBtn.addEventListener('click', function (event) {
-   event.preventDefault();
-    if (formObj.trim() === '') {
-        alert ("Please complete the form");
-    }
-    else (formObj.trim() !=='')
-    updateLocalStorage();
-    window.location.href = ".\blog.html";
-    
-    });
-*/
-
+//converts stored data to an array
 const blogdata = JSON.parse(localStorage.getItem('blogs'));
 let blogs;
 if (blogdata){
@@ -64,7 +36,7 @@ if (blogdata){
 
 
 
-
+//funtion to store array in local storage
 function storeBlogs() {
     localStorage.setItem('blogs', JSON.stringify(blogs));
    
@@ -107,27 +79,13 @@ function storeBlogs() {
             storeBlogs();
         }  
         
-       /* window.addEventListener('beforeunload', () => {
-            const blogObjtoSave = { blogs: 'blogs' };
-            localStorage.setItem('blogs', JSON.stringify(blogObjtoSave));
-        });
-        */
+       
       });
         
       
       
-   
-     /* function goBack(event) {
-        window.history.back();
-  };
-  
-        /*const inputValue = [
-            document.getElementById('username-input').value,
-            document.getElementById('title-input').value,
-            document.getElementById('content-input').value,
-        ]
-  */
-  //Call init to retreieve data and render it to the page
+
+  //Call init to store the blog data
   
     init();
   

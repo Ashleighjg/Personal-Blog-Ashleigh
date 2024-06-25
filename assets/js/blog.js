@@ -26,7 +26,7 @@ themeSwitcher.addEventListener('click', function () {
 
 
 
-
+//converts stored data to an array
 const blogdata = JSON.parse(localStorage.getItem('blogs'));
 let blogs;
 if (blogdata){
@@ -37,27 +37,31 @@ if (blogdata){
 
 
 function renderBlog () {
-  const ul =document.createElement('ul')
-  ul.setAttribute('class' , 'list-group')
-// Render a new li for each blog
+  const div =document.createElement('div')
+  div.setAttribute('class' , 'list-group')
+  
+  
+// Render a new ul for each blog
   for (let i = 0; i < blogs.length; i++) {
     const blog = blogs[i];
 
-    const li = document.createElement('li');
-    // li.innerHTML = blog;
-    li.innerHTML = `UserName :- ${blog.username}, Title :- ${blog.title}, Content :- ${blog.content}`;
-    li.setAttribute('data-index', i);
-    ul.appendChild(li);
-  } console.log(ul)
-   blogList.appendChild(ul);
+    const ul = document.createElement('ul');
+    const liContent = document.createElement('li');
+    const liUsername =document.createElement(`li`);
+    ul.innerHTML = (`Title : ${blog.title} `);
+    liContent.innerHTML = (`Content : ${blog.content}`);
+    liUsername.innerHTML = (`UserName : ${blog.username}`);
+    ul.setAttribute('data-index', i);
+    ul.setAttribute('class' , 'postscontainer')
+    div.appendChild(ul);
+    ul.appendChild(liContent);
+    ul.appendChild(liUsername);
+  } console.log(div)
+    blogList.appendChild(div);
 
 }
 
-     /*
-     document.getElementById('saved-username').innerHTML=blogs.username;
-     document.getElementById('saved-title').innerHTML=blogs.title;
-     document.getElementById('saved-content').innerHTML=blogs.content;
-     */
+
 
 //runs when the page loads
   function init () {
@@ -73,33 +77,12 @@ function renderBlog () {
 
    
 
-/*  window.addEventListener('beforeunload', () => {
-    const blogObjtoSave = { blogs: 'blogs' };
-    localStorage.setItem('blogs', JSON.stringify(blogObjtoSave));
-});
-*/
-
-
-
-    
-   /* function goBack () {
-      goBackbtn.addEventListener('click', function(event) {
-      // Handle the click event here
-      window.history.back(); // This will go back to the previous page in the browser history
-});
-};  */
-    
-    
+//go back button functionality that take the user back to the form
  
       function goBack(event) {
       window.history.back();
 };
 
-      /*const inputValue = [
-          document.getElementById('username-input').value,
-          document.getElementById('title-input').value,
-          document.getElementById('content-input').value,
-      ]
-*/
+     
 //Call init to retreieve data and render it to the page
   init();

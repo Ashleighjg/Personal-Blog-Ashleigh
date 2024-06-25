@@ -8,7 +8,7 @@ body {
   
   .toggle {
     width: 310px;
-    background-color: rgba(106, 53, 106, 0.15)
+    background-color: purple
   }
   
   /* Dark Mode */
@@ -113,16 +113,5 @@ body {
     margin: 20px;
   }
   
-  footer {
-  
-    color: black;
-    Background: linear-gradient(0.25turn, #088e97, #420772);
-    text-align: center;
-    position: relative;
-    padding: 30px;
-    clear: both;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
-    font-size: 30px;
-    align-items: center;
-  }
+ 
   

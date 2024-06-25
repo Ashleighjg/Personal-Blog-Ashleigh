@@ -1,6 +1,6 @@
 body {
   display: block;
-  margin: 0px;
+  margin: 10px 500px;
 }
 
 
@@ -91,11 +91,11 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: rgb(199, 57, 135);
+  background-color: purple;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px rgb(199, 57, 135);
+  box-shadow: 0 0 1px purple;
 }
 
 input:checked + .slider:before {
@@ -121,6 +121,27 @@ input:checked + .slider:before {
   margin: 20px;
 }
 
+.postscontainer {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-style: solid;
+  border-width: 10px;
+  margin: 1rem;
+  font-size: 20px;
+  box-shadow: 10px 10px 5px purple;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-
+ .posts-div{
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-style: solid;
+  border-width: 10px;
+  margin: 1rem;
   
+ } 
+
+ ul {
+  list-style-type: none;
+ }
+
